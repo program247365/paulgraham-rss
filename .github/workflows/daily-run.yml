@@ -1,0 +1,41 @@
+name: Daily Run
+
+on:
+  schedule:
+    # Run at 1:05 AM UTC every day
+    - cron: '5 1 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Required for git diff to work properly
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+        
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        
+    - name: Install dependencies
+      run: |
+        uv pip install -e .
+        
+    - name: Run Python script
+      run: python3 main.py
+      
+    - name: Commit and push if rss.xml changed
+      run: |-
+        git diff
+        git config --global user.email "rss-bot@example.com"
+        git config --global user.name "RSS-bot"
+        git diff --quiet rss.xml || (git add rss.xml && git commit -m "Updated RSS feed")
+        git push 

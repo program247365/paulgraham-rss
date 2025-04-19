@@ -1,0 +1,22 @@
+[project]
+name = "paulgraham-rss"
+version = "0.1.0"
+description = "A tool to fetch and process Paul Graham's essays"
+authors = [
+    { name = "Kevin B. Ridgway", email = "k@kbr.sh" }
+]
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "lxml",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+python = "3.8"
