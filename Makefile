@@ -3,14 +3,14 @@
 # CI-specific tasks
 ci-setup:
 	curl -LsSf https://astral.sh/uv/install.sh | sh
-	uv venv
-	source .venv/bin/activate
+	uv venv --python 3.13
+	. .venv/bin/activate
 
 ci-install:
-	source .venv/bin/activate && uv pip install -e .
+	. .venv/bin/activate && uv pip install -e .
 
 ci-run:
-	source .venv/bin/activate && python3 main.py
+	. .venv/bin/activate && python3 main.py
 
 ci-commit:
 	git diff
