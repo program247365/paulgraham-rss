@@ -21,21 +21,14 @@ jobs:
       with:
         python-version: '3.x'
         
-    - name: Install uv
-      run: |
-        curl -LsSf https://astral.sh/uv/install.sh | sh
+    - name: Setup environment
+      run: make ci-setup
         
     - name: Install dependencies
-      run: |
-        uv pip install -e .
+      run: make ci-install
         
     - name: Run Python script
-      run: python3 main.py
+      run: make ci-run
       
-    - name: Commit and push if rss.xml changed
-      run: |-
-        git diff
-        git config --global user.email "rss-bot@example.com"
-        git config --global user.name "RSS-bot"
-        git diff --quiet rss.xml || (git add rss.xml && git commit -m "Updated RSS feed")
-        git push 
+    - name: Commit changes
+      run: make ci-commit 
