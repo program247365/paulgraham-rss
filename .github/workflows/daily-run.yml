@@ -15,6 +15,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0  # Required for git diff to work properly
+        token: ${{ secrets.RSS_BOT_GITHUB_TOKEN }}  # Use the token for authentication
     
     - name: Set up Python
       uses: actions/setup-python@v5
