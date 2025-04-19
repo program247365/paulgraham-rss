@@ -5,6 +5,12 @@ on:
     # Run at 1:05 AM UTC every day
     - cron: '5 1 * * *'
   workflow_dispatch:  # Allow manual triggering
+    inputs:
+      debug:
+        description: 'Enable debug mode for more verbose logging'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   run-script:
@@ -30,8 +36,5 @@ jobs:
         
     - name: Run script and commit changes
       run: |-
-        make ci-run
-
-    - name: Commit changes
-      run: |-
-        make ci-commit 
+        make ci-run DEBUG=${{ inputs.debug }}
+        make ci-commit DEBUG=${{ inputs.debug }} 
