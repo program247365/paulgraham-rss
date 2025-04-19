@@ -13,17 +13,8 @@ ci-run:
 	. .venv/bin/activate && python3 main.py
 
 ci-commit:
-	@echo "Current git status:"
-	git status
-	@echo "\nGit diff output:"
-	git diff rss.xml
+	git diff
 	git config --global user.email "rss-bot@example.com"
 	git config --global user.name "RSS-bot"
-	if [ -n "$$(git diff rss.xml)" ]; then \
-		echo "Changes detected in rss.xml"; \
-		git add rss.xml; \
-		git commit -m "Updated RSS feed"; \
-		git push; \
-	else \
-		echo "No changes detected in rss.xml"; \
-	fi 
+	git diff --quiet rss.xml || (git add rss.xml && git commit -m "Updated RSS feed")
+	git push 
