@@ -30,4 +30,8 @@ jobs:
         
     - name: Run script and commit changes
       run: |-
-        make ci-run && make ci-commit 
+        make ci-run
+
+    - name: Commit changes
+      run: |-
+        make ci-commit 
