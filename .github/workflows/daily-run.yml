@@ -38,6 +38,10 @@ jobs:
       run: |-
         make ci-run DEBUG=${{ inputs.debug }}
 
-    - name: Commit changes
+    - name: Commit and push if RSS feed changed
       run: |-
-        make ci-commit DEBUG=${{ inputs.debug }}
+        git diff
+        git config --global user.email "rss-bot@example.com"
+        git config --global user.name "RSS-bot"
+        git diff --quiet || (git add rss.xml && git commit -m "Updated RSS feed")
+        git push origin main
