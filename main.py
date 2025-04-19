@@ -4,6 +4,8 @@ import re
 from datetime import datetime
 import logging
 import time
+import os
+import sys
 
 # Configure logging
 logging.basicConfig(
@@ -11,6 +13,14 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+
+# Check for debug mode
+DEBUG = os.environ.get('DEBUG', 'false').lower() == 'true'
+if DEBUG:
+    logging.info("Debug mode enabled")
+    logging.info(f"Current working directory: {os.getcwd()}")
+    logging.info(f"Python version: {sys.version}")
+    logging.info(f"Environment variables: {dict(os.environ)}")
 
 def create_rss_feed():
     start_time = time.time()
@@ -47,9 +57,28 @@ def create_rss_feed():
 
     # Save to file
     output_file = 'rss.xml'
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(rss)
-    logging.info(f"Feed saved to {output_file}")
+    output_path = os.path.abspath(output_file)
+    if DEBUG:
+        logging.info(f"Attempting to write RSS feed to: {output_path}")
+        logging.info(f"Directory exists: {os.path.exists(os.path.dirname(output_path))}")
+        logging.info(f"Directory permissions: {oct(os.stat(os.path.dirname(output_path)).st_mode)[-3:]}")
+        logging.info(f"File will be written with contents length: {len(rss)} bytes")
+
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(rss)
+        if DEBUG:
+            logging.info(f"Successfully wrote RSS feed to {output_path}")
+            logging.info(f"File exists after write: {os.path.exists(output_path)}")
+            logging.info(f"File size after write: {os.path.getsize(output_path)} bytes")
+            logging.info(f"File permissions after write: {oct(os.stat(output_path).st_mode)[-3:]}")
+    except Exception as e:
+        logging.error(f"Failed to write RSS feed: {str(e)}")
+        if DEBUG:
+            logging.error(f"Error details: {type(e).__name__}")
+            import traceback
+            logging.error(traceback.format_exc())
+        raise
 
     end_time = time.time()
     execution_time = end_time - start_time
