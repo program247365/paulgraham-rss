@@ -34,7 +34,10 @@ jobs:
     - name: Install dependencies
       run: make ci-install
         
-    - name: Run script and commit changes
+    - name: Generate RSS feed
       run: |-
         make ci-run DEBUG=${{ inputs.debug }}
-        make ci-commit DEBUG=${{ inputs.debug }} 
+
+    - name: Commit changes
+      run: |-
+        make ci-commit DEBUG=${{ inputs.debug }}
