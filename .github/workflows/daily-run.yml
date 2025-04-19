@@ -28,8 +28,6 @@ jobs:
     - name: Install dependencies
       run: make ci-install
         
-    - name: Run Python script
-      run: make ci-run
-      
-    - name: Commit changes
-      run: make ci-commit 
+    - name: Run script and commit changes
+      run: |-
+        make ci-run && make ci-commit 
