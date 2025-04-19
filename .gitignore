@@ -32,7 +32,3 @@ ENV/
 .vscode/
 *.swp
 *.swo
-
-# Project specific
-*.html
-*.xml 
