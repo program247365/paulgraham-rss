@@ -1,4 +1,4 @@
-.PHONY: help ci-setup ci-install ci-run ci-commit
+.PHONY: help ci-setup ci-install ci-run ci-commit code-format rss-validate
 
 # Default target
 .DEFAULT_GOAL := help
@@ -6,11 +6,13 @@
 # Help task
 help:
 	@echo "Available targets:"
-	@echo "  help       - Show this help message"
-	@echo "  ci-setup   - Install uv and create virtual environment"
-	@echo "  ci-install - Install package in development mode"
-	@echo "  ci-run     - Run the main Python script"
-	@echo "  ci-commit  - Commit and push changes to git"
+	@echo "  help         - Show this help message"
+	@echo "  ci-setup     - Install uv and create virtual environment"
+	@echo "  ci-install   - Install package in development mode"
+	@echo "  ci-run       - Run the main Python script"
+	@echo "  ci-commit    - Commit and push changes to git"
+	@echo "  code-format  - Format code using ruff"
+	@echo "  rss-validate - Validate the RSS feed using W3C validator"
 
 # CI-specific tasks
 ci-setup:

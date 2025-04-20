@@ -40,12 +40,14 @@ The generated RSS feed will be saved as `rss.xml` in the project root.
 
 ## Makefile Tasks
 
-The project includes a Makefile with CI-specific tasks:
+The project includes a Makefile with the following tasks:
 
 - `make ci-setup`: Sets up the Python environment
 - `make ci-install`: Installs project dependencies
 - `make ci-run`: Generates the RSS feed
 - `make ci-commit`: Commits and pushes changes if the RSS feed has been updated
+- `make code-format`: Formats the code using ruff
+- `make rss-validate`: Validates the RSS feed using the W3C validator
 
 ## CI/CD Setup
 
