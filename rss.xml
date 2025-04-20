@@ -4,27 +4,34 @@
   <title>Paul Graham Essays</title>
   <link>https://paulgraham.com/articles.html</link>
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Sun, 20 Apr 2025 02:01:03 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 20 Apr 2025 02:33:29 +0000</lastBuildDate>
   <item>
-    <title>How to Do Great Work</title>
-    <link>https://paulgraham.com/greatwork.html</link>
-    <guid>https://paulgraham.com/greatwork.html</guid>
-    <pubDate>Sat, 01 Jul 2023 12:00:00 +0000</pubDate>
-    <description><![CDATA[How to Do Great Work]]></description>
+    <title>What Languages Fix</title>
+    <link>https://paulgraham.com/fix.html</link>
+    <guid>https://paulgraham.com/fix.html</guid>
+    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
+    <description><![CDATA[What Languages Fix]]></description>
   </item>
   <item>
-    <title>Having Kids</title>
-    <link>https://paulgraham.com/kids.html</link>
-    <guid>https://paulgraham.com/kids.html</guid>
-    <pubDate>Sun, 01 Dec 2019 12:00:00 +0000</pubDate>
-    <description><![CDATA[Having Kids]]></description>
+    <title>Why Arc Isn't Especially Object-Oriented</title>
+    <link>https://paulgraham.com/noop.html</link>
+    <guid>https://paulgraham.com/noop.html</guid>
+    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
+    <description><![CDATA[Why Arc Isn't Especially Object-Oriented]]></description>
   </item>
   <item>
-    <title>How to Lose Time and Money</title>
-    <link>https://paulgraham.com/selfindulgence.html</link>
-    <guid>https://paulgraham.com/selfindulgence.html</guid>
-    <pubDate>Thu, 01 Jul 2010 12:00:00 +0000</pubDate>
-    <description><![CDATA[How to Lose Time and Money]]></description>
+    <title>Programming Bottom-Up</title>
+    <link>https://paulgraham.com/progbot.html</link>
+    <guid>https://paulgraham.com/progbot.html</guid>
+    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
+    <description><![CDATA[Programming Bottom-Up]]></description>
+  </item>
+  <item>
+    <title>RSS</title>
+    <link>https://paulgraham.com/rss.html</link>
+    <guid>https://paulgraham.com/rss.html</guid>
+    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
+    <description><![CDATA[RSS]]></description>
   </item>
   <item>
     <title>What to Do</title>
@@ -95,6 +102,13 @@
     <guid>https://paulgraham.com/superlinear.html</guid>
     <pubDate>Sun, 01 Oct 2023 12:00:00 +0000</pubDate>
     <description><![CDATA[Superlinear Returns]]></description>
+  </item>
+  <item>
+    <title>How to Do Great Work</title>
+    <link>https://paulgraham.com/greatwork.html</link>
+    <guid>https://paulgraham.com/greatwork.html</guid>
+    <pubDate>Sat, 01 Jul 2023 12:00:00 +0000</pubDate>
+    <description><![CDATA[How to Do Great Work]]></description>
   </item>
   <item>
     <title>How to Do Great Work</title>
@@ -237,13 +251,6 @@
     <description><![CDATA[Donate Unrestricted]]></description>
   </item>
   <item>
-    <title>What I Worked On</title>
-    <link>https://paulgraham.com/worked.html</link>
-    <guid>https://paulgraham.com/worked.html</guid>
-    <pubDate>Mon, 01 Jan 1996 12:00:00 +0000</pubDate>
-    <description><![CDATA[What I Worked On]]></description>
-  </item>
-  <item>
     <title>Earnestness</title>
     <link>https://paulgraham.com/earnest.html</link>
     <guid>https://paulgraham.com/earnest.html</guid>
@@ -256,13 +263,6 @@
     <guid>https://paulgraham.com/ace.html</guid>
     <pubDate>Tue, 01 Dec 2020 12:00:00 +0000</pubDate>
     <description><![CDATA[Billionaires Build]]></description>
-  </item>
-  <item>
-    <title>The Airbnbs</title>
-    <link>https://paulgraham.com/airbnbs.html</link>
-    <guid>https://paulgraham.com/airbnbs.html</guid>
-    <pubDate>Thu, 01 Jan 2009 12:00:00 +0000</pubDate>
-    <description><![CDATA[The Airbnbs]]></description>
   </item>
   <item>
     <title>How to Think for Yourself</title>
@@ -328,6 +328,13 @@
     <description><![CDATA[Haters]]></description>
   </item>
   <item>
+    <title>Having Kids</title>
+    <link>https://paulgraham.com/kids.html</link>
+    <guid>https://paulgraham.com/kids.html</guid>
+    <pubDate>Sun, 01 Dec 2019 12:00:00 +0000</pubDate>
+    <description><![CDATA[Having Kids]]></description>
+  </item>
+  <item>
     <title>The Two Kinds of Moderate</title>
     <link>https://paulgraham.com/mod.html</link>
     <guid>https://paulgraham.com/mod.html</guid>
@@ -389,6 +396,13 @@
     <guid>https://paulgraham.com/disc.html</guid>
     <pubDate>Sun, 01 Jan 2017 12:00:00 +0000</pubDate>
     <description><![CDATA[The Risk of Discovery]]></description>
+  </item>
+  <item>
+    <title>This Year We Can End the Death Penalty in California</title>
+    <link>https://paulgraham.com/prop62.html</link>
+    <guid>https://paulgraham.com/prop62.html</guid>
+    <pubDate>Tue, 01 Nov 2016 12:00:00 +0000</pubDate>
+    <description><![CDATA[This Year We Can End the Death Penalty in California]]></description>
   </item>
   <item>
     <title>How to Make Pittsburgh a Startup Hub</title>
@@ -727,6 +741,13 @@
     <description><![CDATA[The Future of Startup Funding]]></description>
   </item>
   <item>
+    <title>How to Lose Time and Money</title>
+    <link>https://paulgraham.com/selfindulgence.html</link>
+    <guid>https://paulgraham.com/selfindulgence.html</guid>
+    <pubDate>Thu, 01 Jul 2010 12:00:00 +0000</pubDate>
+    <description><![CDATA[How to Lose Time and Money]]></description>
+  </item>
+  <item>
     <title>The Acceleration of Addictiveness</title>
     <link>https://paulgraham.com/addiction.html</link>
     <guid>https://paulgraham.com/addiction.html</guid>
@@ -900,6 +921,13 @@
     <guid>https://paulgraham.com/identity.html</guid>
     <pubDate>Sun, 01 Feb 2009 12:00:00 +0000</pubDate>
     <description><![CDATA[Keep Your Identity Small]]></description>
+  </item>
+  <item>
+    <title>The Airbnbs</title>
+    <link>https://paulgraham.com/airbnbs.html</link>
+    <guid>https://paulgraham.com/airbnbs.html</guid>
+    <pubDate>Thu, 01 Jan 2009 12:00:00 +0000</pubDate>
+    <description><![CDATA[The Airbnbs]]></description>
   </item>
   <item>
     <title>After Credentials</title>
@@ -1112,6 +1140,13 @@
     <description><![CDATA[Microsoft is Dead]]></description>
   </item>
   <item>
+    <title>How to Present to Investors</title>
+    <link>https://paulgraham.com/investors.html</link>
+    <guid>https://paulgraham.com/investors.html</guid>
+    <pubDate>Sun, 01 Apr 2007 12:00:00 +0000</pubDate>
+    <description><![CDATA[How to Present to Investors]]></description>
+  </item>
+  <item>
     <title>Why to Not Not Start a Startup</title>
     <link>https://paulgraham.com/notnot.html</link>
     <guid>https://paulgraham.com/notnot.html</guid>
@@ -1154,13 +1189,6 @@
     <description><![CDATA[A Student's Guide to Startups]]></description>
   </item>
   <item>
-    <title>How to Present to Investors</title>
-    <link>https://paulgraham.com/investors.html</link>
-    <guid>https://paulgraham.com/investors.html</guid>
-    <pubDate>Sun, 01 Apr 2007 12:00:00 +0000</pubDate>
-    <description><![CDATA[How to Present to Investors]]></description>
-  </item>
-  <item>
     <title>Copy What You Like</title>
     <link>https://paulgraham.com/copy.html</link>
     <guid>https://paulgraham.com/copy.html</guid>
@@ -1180,6 +1208,13 @@
     <guid>https://paulgraham.com/marginal.html</guid>
     <pubDate>Thu, 01 Jun 2006 12:00:00 +0000</pubDate>
     <description><![CDATA[The Power of the Marginal]]></description>
+  </item>
+  <item>
+    <title>It's Charisma, Stupid</title>
+    <link>https://paulgraham.com/charisma.html</link>
+    <guid>https://paulgraham.com/charisma.html</guid>
+    <pubDate>Thu, 01 Jun 2006 12:00:00 +0000</pubDate>
+    <description><![CDATA[It's Charisma, Stupid]]></description>
   </item>
   <item>
     <title>Why Startups Condense in America</title>
@@ -1217,13 +1252,6 @@
     <description><![CDATA[Are Software Patents Evil?]]></description>
   </item>
   <item>
-    <title>6,631,372</title>
-    <link>https://paulgraham.com/6631327.html</link>
-    <guid>https://paulgraham.com/6631327.html</guid>
-    <pubDate>Sun, 01 Feb 1998 12:00:00 +0000</pubDate>
-    <description><![CDATA[6,631,372]]></description>
-  </item>
-  <item>
     <title>Why YC</title>
     <link>https://paulgraham.com/whyyc.html</link>
     <guid>https://paulgraham.com/whyyc.html</guid>
@@ -1238,18 +1266,18 @@
     <description><![CDATA[How to Do What You Love]]></description>
   </item>
   <item>
+    <title>The Submarine</title>
+    <link>https://paulgraham.com/submarine.html</link>
+    <guid>https://paulgraham.com/submarine.html</guid>
+    <pubDate>Sun, 01 Jan 2006 12:00:00 +0000</pubDate>
+    <description><![CDATA[The Submarine]]></description>
+  </item>
+  <item>
     <title>Good and Bad Procrastination</title>
     <link>https://paulgraham.com/procrastination.html</link>
     <guid>https://paulgraham.com/procrastination.html</guid>
     <pubDate>Thu, 01 Dec 2005 12:00:00 +0000</pubDate>
     <description><![CDATA[Good and Bad Procrastination]]></description>
-  </item>
-  <item>
-    <title>Web 2.0</title>
-    <link>https://paulgraham.com/web20.html</link>
-    <guid>https://paulgraham.com/web20.html</guid>
-    <pubDate>Tue, 01 Jun 2004 12:00:00 +0000</pubDate>
-    <description><![CDATA[Web 2.0]]></description>
   </item>
   <item>
     <title>How to Fund a Startup</title>
@@ -1301,27 +1329,6 @@
     <description><![CDATA[What Business Can Learn from Open Source]]></description>
   </item>
   <item>
-    <title>Hiring is Obsolete</title>
-    <link>https://paulgraham.com/hiring.html</link>
-    <guid>https://paulgraham.com/hiring.html</guid>
-    <pubDate>Tue, 01 Feb 1994 12:00:00 +0000</pubDate>
-    <description><![CDATA[Hiring is Obsolete]]></description>
-  </item>
-  <item>
-    <title>The Submarine</title>
-    <link>https://paulgraham.com/submarine.html</link>
-    <guid>https://paulgraham.com/submarine.html</guid>
-    <pubDate>Sun, 01 Jan 2006 12:00:00 +0000</pubDate>
-    <description><![CDATA[The Submarine]]></description>
-  </item>
-  <item>
-    <title>Why Smart People Have Bad Ideas</title>
-    <link>https://paulgraham.com/bronze.html</link>
-    <guid>https://paulgraham.com/bronze.html</guid>
-    <pubDate>Sun, 01 Jan 1995 12:00:00 +0000</pubDate>
-    <description><![CDATA[Why Smart People Have Bad Ideas]]></description>
-  </item>
-  <item>
     <title>Return of the Mac</title>
     <link>https://paulgraham.com/mac.html</link>
     <guid>https://paulgraham.com/mac.html</guid>
@@ -1371,13 +1378,6 @@
     <description><![CDATA[Made in USA]]></description>
   </item>
   <item>
-    <title>It's Charisma, Stupid</title>
-    <link>https://paulgraham.com/charisma.html</link>
-    <guid>https://paulgraham.com/charisma.html</guid>
-    <pubDate>Thu, 01 Jun 2006 12:00:00 +0000</pubDate>
-    <description><![CDATA[It's Charisma, Stupid]]></description>
-  </item>
-  <item>
     <title>Bradley's Ghost</title>
     <link>https://paulgraham.com/polls.html</link>
     <guid>https://paulgraham.com/polls.html</guid>
@@ -1390,13 +1390,6 @@
     <guid>https://paulgraham.com/laundry.html</guid>
     <pubDate>Fri, 01 Oct 2004 12:00:00 +0000</pubDate>
     <description><![CDATA[A Version 1.0]]></description>
-  </item>
-  <item>
-    <title>What the Bubble Got Right</title>
-    <link>https://paulgraham.com/bubble.html</link>
-    <guid>https://paulgraham.com/bubble.html</guid>
-    <pubDate>Sat, 01 Jan 2000 12:00:00 +0000</pubDate>
-    <description><![CDATA[What the Bubble Got Right]]></description>
   </item>
   <item>
     <title>The Age of the Essay</title>
@@ -1418,6 +1411,13 @@
     <guid>https://paulgraham.com/gh.html</guid>
     <pubDate>Thu, 01 Jul 2004 12:00:00 +0000</pubDate>
     <description><![CDATA[Great Hackers]]></description>
+  </item>
+  <item>
+    <title>Web 2.0</title>
+    <link>https://paulgraham.com/web20.html</link>
+    <guid>https://paulgraham.com/web20.html</guid>
+    <pubDate>Tue, 01 Jun 2004 12:00:00 +0000</pubDate>
+    <description><![CDATA[Web 2.0]]></description>
   </item>
   <item>
     <title>Mind the Gap</title>
@@ -1497,6 +1497,13 @@
     <description><![CDATA[Design and Research]]></description>
   </item>
   <item>
+    <title>Beating the Averages</title>
+    <link>https://paulgraham.com/avg.html</link>
+    <guid>https://paulgraham.com/avg.html</guid>
+    <pubDate>Wed, 01 Jan 2003 12:00:00 +0000</pubDate>
+    <description><![CDATA[Beating the Averages]]></description>
+  </item>
+  <item>
     <title>A Plan for Spam</title>
     <link>https://paulgraham.com/spam.html</link>
     <guid>https://paulgraham.com/spam.html</guid>
@@ -1518,11 +1525,11 @@
     <description><![CDATA[Succinctness is Power]]></description>
   </item>
   <item>
-    <title>What Languages Fix</title>
-    <link>https://paulgraham.com/fix.html</link>
-    <guid>https://paulgraham.com/fix.html</guid>
-    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
-    <description><![CDATA[What Languages Fix]]></description>
+    <title>What Made Lisp Different</title>
+    <link>https://paulgraham.com/diff.html</link>
+    <guid>https://paulgraham.com/diff.html</guid>
+    <pubDate>Wed, 01 May 2002 12:00:00 +0000</pubDate>
+    <description><![CDATA[What Made Lisp Different]]></description>
   </item>
   <item>
     <title>Taste for Makers</title>
@@ -1530,20 +1537,6 @@
     <guid>https://paulgraham.com/taste.html</guid>
     <pubDate>Fri, 01 Feb 2002 12:00:00 +0000</pubDate>
     <description><![CDATA[Taste for Makers]]></description>
-  </item>
-  <item>
-    <title>Why Arc Isn't Especially Object-Oriented</title>
-    <link>https://paulgraham.com/noop.html</link>
-    <guid>https://paulgraham.com/noop.html</guid>
-    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
-    <description><![CDATA[Why Arc Isn't Especially Object-Oriented]]></description>
-  </item>
-  <item>
-    <title>What Made Lisp Different</title>
-    <link>https://paulgraham.com/diff.html</link>
-    <guid>https://paulgraham.com/diff.html</guid>
-    <pubDate>Wed, 01 May 2002 12:00:00 +0000</pubDate>
-    <description><![CDATA[What Made Lisp Different]]></description>
   </item>
   <item>
     <title>The Other Road Ahead</title>
@@ -1581,13 +1574,6 @@
     <description><![CDATA[Java's Cover]]></description>
   </item>
   <item>
-    <title>Beating the Averages</title>
-    <link>https://paulgraham.com/avg.html</link>
-    <guid>https://paulgraham.com/avg.html</guid>
-    <pubDate>Wed, 01 Jan 2003 12:00:00 +0000</pubDate>
-    <description><![CDATA[Beating the Averages]]></description>
-  </item>
-  <item>
     <title>Lisp for Web-Based Applications</title>
     <link>https://paulgraham.com/lwba.html</link>
     <guid>https://paulgraham.com/lwba.html</guid>
@@ -1595,25 +1581,39 @@
     <description><![CDATA[Lisp for Web-Based Applications]]></description>
   </item>
   <item>
-    <title>Programming Bottom-Up</title>
-    <link>https://paulgraham.com/progbot.html</link>
-    <guid>https://paulgraham.com/progbot.html</guid>
-    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
-    <description><![CDATA[Programming Bottom-Up]]></description>
+    <title>What the Bubble Got Right</title>
+    <link>https://paulgraham.com/bubble.html</link>
+    <guid>https://paulgraham.com/bubble.html</guid>
+    <pubDate>Sat, 01 Jan 2000 12:00:00 +0000</pubDate>
+    <description><![CDATA[What the Bubble Got Right]]></description>
   </item>
   <item>
-    <title>This Year We Can End the Death Penalty in California</title>
-    <link>https://paulgraham.com/prop62.html</link>
-    <guid>https://paulgraham.com/prop62.html</guid>
-    <pubDate>Tue, 01 Nov 2016 12:00:00 +0000</pubDate>
-    <description><![CDATA[This Year We Can End the Death Penalty in California]]></description>
+    <title>6,631,372</title>
+    <link>https://paulgraham.com/6631327.html</link>
+    <guid>https://paulgraham.com/6631327.html</guid>
+    <pubDate>Sun, 01 Feb 1998 12:00:00 +0000</pubDate>
+    <description><![CDATA[6,631,372]]></description>
   </item>
   <item>
-    <title>RSS</title>
-    <link>https://paulgraham.com/rss.html</link>
-    <guid>https://paulgraham.com/rss.html</guid>
-    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
-    <description><![CDATA[RSS]]></description>
+    <title>What I Worked On</title>
+    <link>https://paulgraham.com/worked.html</link>
+    <guid>https://paulgraham.com/worked.html</guid>
+    <pubDate>Mon, 01 Jan 1996 12:00:00 +0000</pubDate>
+    <description><![CDATA[What I Worked On]]></description>
+  </item>
+  <item>
+    <title>Why Smart People Have Bad Ideas</title>
+    <link>https://paulgraham.com/bronze.html</link>
+    <guid>https://paulgraham.com/bronze.html</guid>
+    <pubDate>Sun, 01 Jan 1995 12:00:00 +0000</pubDate>
+    <description><![CDATA[Why Smart People Have Bad Ideas]]></description>
+  </item>
+  <item>
+    <title>Hiring is Obsolete</title>
+    <link>https://paulgraham.com/hiring.html</link>
+    <guid>https://paulgraham.com/hiring.html</guid>
+    <pubDate>Tue, 01 Feb 1994 12:00:00 +0000</pubDate>
+    <description><![CDATA[Hiring is Obsolete]]></description>
   </item>
 </channel>
 </rss>
