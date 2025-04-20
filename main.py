@@ -143,6 +143,12 @@ def generate_rss_xml(articles):
 
     # Add items for each article
     for article in sorted_articles:
+        if article["url"] == "https://paulgraham.com/rss.html":
+            logging.info(f"Skipping RSS feed URL: {article['url']}")
+            logging.info(f"The whole reason we're here is to generate the RSS feed")
+            logging.info(f"So we're just going to skip this one")
+            logging.info(f"Because the original RSS feed is non-HTTPS")
+            continue
         rss += '  <item>\n'
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'
