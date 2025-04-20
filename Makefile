@@ -29,5 +29,5 @@ ci-commit:
 	git config user.name "github-actions[bot]"
 	git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 	git add rss.xml
-	git commit -m "generated"
+	git commit -m "Update RSS feed."
 	git push

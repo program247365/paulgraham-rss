@@ -2,6 +2,10 @@
 
 This project generates an RSS feed from Paul Graham's essays, making them easily accessible through your favorite RSS reader.
 
+## RSS Feed URL
+
+The RSS feed is available at: [https://program247365.github.io/paulgraham-rss/rss.xml](https://program247365.github.io/paulgraham-rss/rss.xml)
+
 ## Features
 
 - Automatically fetches and parses Paul Graham's essays
@@ -45,11 +49,13 @@ The project includes a Makefile with CI-specific tasks:
 
 ## CI/CD Setup
 
-The project uses GitHub Actions to automatically update the RSS feed daily. To set this up:
+The project uses GitHub Actions to automatically update the RSS feed. The workflow runs:
+- Daily at 1:05 AM UTC
+- On manual trigger through the GitHub Actions interface
 
+To set this up:
 1. Create a Personal Access Token (PAT) with `repo` scope
 2. Add it to your repository's secrets as `RSS_BOT_GITHUB_TOKEN`
-3. The workflow will run daily at 1:05 AM UTC
 
 ## License
 
