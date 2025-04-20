@@ -139,10 +139,13 @@ def get_article_date(url):
 def generate_rss_xml(articles):
     # Create RSS header
     rss = '<?xml version="1.0" encoding="UTF-8" ?>\n'
-    rss += '<rss version="2.0">\n'
+    rss += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
     rss += '<channel>\n'
     rss += '  <title>Paul Graham Essays</title>\n'
     rss += '  <link>https://paulgraham.com/articles.html</link>\n'
+    rss += ('  <atom:link '
+            'href="https://program247365.github.io/paulgraham-rss/rss.xml" '
+            'rel="self" type="application/rss+xml" />\n')
     rss += '  <description>Essays by Paul Graham</description>\n'
     rss += (
         f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}'
