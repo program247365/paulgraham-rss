@@ -149,8 +149,16 @@ def generate_rss_xml(articles):
         '</lastBuildDate>\n'
     )
 
-    # Add items for each article
+    # Remove duplicates based on URL
+    seen_urls = set()
+    unique_articles = []
     for article in articles:
+        if article["url"] not in seen_urls:
+            seen_urls.add(article["url"])
+            unique_articles.append(article)
+
+    # Add items for each unique article
+    for article in unique_articles:
         rss += '  <item>\n'
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'

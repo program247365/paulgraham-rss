@@ -34,3 +34,6 @@ ci-commit:
 
 code-format:
 	ruff check --fix .
+
+rss-validate:
+	open https://validator.w3.org/feed/check.cgi?url=https://program247365.github.io/paulgraham-rss/rss.xml?timestamp=$(shell date +%s)
