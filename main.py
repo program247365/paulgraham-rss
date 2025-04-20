@@ -52,7 +52,9 @@ def create_rss_feed():
                     'title': title,
                     'url': article_url,
                     # Set fixed date for progbot.html, otherwise fetch from page
-                    'date': 'Wed, 01 Jan 1997 12:00:00 +0000' if article_url.endswith('progbot.html') else get_article_date(article_url)
+                    'date': ('Wed, 01 Jan 1997 12:00:00 +0000'
+                            if article_url.endswith('progbot.html')
+                            else get_article_date(article_url))
                 })
 
     # Generate RSS feed
@@ -104,7 +106,7 @@ def get_article_date(url):
         # Look for date patterns like "March 2025", "January 2022" or just "1997"
         months = ["January", "February", "March", "April", "May", "June",
                  "July", "August", "September", "October", "November", "December"]
-        
+
         # First try to find month + year pattern
         for month in months:
             pattern = f"{month} \\d{{4}}"
@@ -116,7 +118,7 @@ def get_article_date(url):
                     return date.strftime("%a, %d %b %Y 12:00:00 +0000")
                 except (ValueError, TypeError):
                     continue
-        
+
         # If no month+year found, look for just a year
         year_pattern = r'\b\d{4}\b'
         year_match = re.search(year_pattern, text)
@@ -131,8 +133,8 @@ def get_article_date(url):
         # Return current date if no date found
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
     except Exception:
-        # Return current date if any error occurs
-        return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
+        # Return 1970 date if any error occurs
+        return datetime(1970, 1, 1).strftime("%a, %d %b %Y 12:00:00 +0000")
 
 def generate_rss_xml(articles):
     # Create RSS header
@@ -153,7 +155,11 @@ def generate_rss_xml(articles):
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'
         rss += f'    <guid>{article["url"]}</guid>\n'
-        rss += f'    <pubDate>{article["date"]}</pubDate>\n'
+        pub_date = (
+            "" if article["url"] == "https://paulgraham.com/noop.html"
+            else article["date"]
+        )
+        rss += f'    <pubDate>{pub_date}</pubDate>\n'
         rss += '    <description><![CDATA[' + article["title"] + ']]></description>\n'
         rss += '  </item>\n'
 
