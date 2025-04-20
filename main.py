@@ -155,8 +155,12 @@ def generate_rss_xml(articles):
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'
         rss += f'    <guid>{article["url"]}</guid>\n'
+        # For noop.html, use Mar 16 2002 as the date - between Feb 1 and May 1 2002
+        # This places the article chronologically between "Taste for Makers" and
+        # "What Made Lisp Different"
         pub_date = (
-            "" if article["url"] == "https://paulgraham.com/noop.html"
+            "Sat, 16 Mar 2002 12:00:00 +0000"
+            if article["url"] == "https://paulgraham.com/noop.html"
             else article["date"]
         )
         rss += f'    <pubDate>{pub_date}</pubDate>\n'
