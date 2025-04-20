@@ -1,11 +1,12 @@
+import logging
+import os
+import re
+import sys
+import time
+from datetime import datetime
+
 import requests
 from bs4 import BeautifulSoup
-import re
-from datetime import datetime
-import logging
-import time
-import os
-import sys
 
 # Configure logging
 logging.basicConfig(
@@ -25,7 +26,7 @@ if DEBUG:
 def create_rss_feed():
     start_time = time.time()
     logging.info("Starting RSS feed generation")
-    
+
     # Fetch the articles page
     url = "https://paulgraham.com/articles.html"
     logging.info(f"Fetching articles from {url}")
@@ -40,7 +41,8 @@ def create_rss_feed():
     logging.info("Processing article links")
     for link in links:
         href = link.get('href')
-        if href and href.endswith('.html') and href != 'index.html' and not href.startswith('http'):
+        if (href and href.endswith('.html') and
+            href != 'index.html' and not href.startswith('http')):
             title = link.text.strip()
             if title:  # Only include links with text
                 article_url = f"https://paulgraham.com/{href}"
@@ -60,8 +62,11 @@ def create_rss_feed():
     output_path = os.path.abspath(output_file)
     if DEBUG:
         logging.info(f"Attempting to write RSS feed to: {output_path}")
-        logging.info(f"Directory exists: {os.path.exists(os.path.dirname(output_path))}")
-        logging.info(f"Directory permissions: {oct(os.stat(os.path.dirname(output_path)).st_mode)[-3:]}")
+        logging.info(
+            f"Directory exists: {os.path.exists(os.path.dirname(output_path))}"
+        )
+        dir_perms = oct(os.stat(os.path.dirname(output_path)).st_mode)[-3:]
+        logging.info(f"Directory permissions: {dir_perms}")
         logging.info(f"File will be written with contents length: {len(rss)} bytes")
 
     try:
@@ -71,9 +76,10 @@ def create_rss_feed():
             logging.info(f"Successfully wrote RSS feed to {output_path}")
             logging.info(f"File exists after write: {os.path.exists(output_path)}")
             logging.info(f"File size after write: {os.path.getsize(output_path)} bytes")
-            logging.info(f"File permissions after write: {oct(os.stat(output_path).st_mode)[-3:]}")
+            file_perms = oct(os.stat(output_path).st_mode)[-3:]
+            logging.info(f"File permissions after write: {file_perms}")
     except Exception as e:
-        logging.error(f"Failed to write RSS feed: {str(e)}")
+        logging.error(f"Failed to write RSS feed: {e!s}")
         if DEBUG:
             logging.error(f"Error details: {type(e).__name__}")
             import traceback
@@ -82,7 +88,7 @@ def create_rss_feed():
 
     end_time = time.time()
     execution_time = end_time - start_time
-    
+
     logging.info(f"RSS feed generation completed in {execution_time:.2f} seconds")
     logging.info(f"Created feed with {len(articles)} articles")
     logging.info(f"Process completed at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -105,12 +111,12 @@ def get_article_date(url):
                     # Convert to proper date format for RSS
                     date_obj = datetime.strptime(date_str, "%B %Y")
                     return date_obj.strftime("%a, %d %b %Y 12:00:00 +0000")
-                except:
+                except Exception:
                     pass
 
         # Return current date if no date found
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
-    except:
+    except Exception:
         # Return current date if any error occurs
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
 
@@ -122,7 +128,11 @@ def generate_rss_xml(articles):
     rss += '  <title>Paul Graham Essays</title>\n'
     rss += '  <link>https://paulgraham.com/articles.html</link>\n'
     rss += '  <description>Essays by Paul Graham</description>\n'
-    rss += f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</lastBuildDate>\n'
+    rss += (
+        f'  <lastBuildDate>'
+        f'{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}'
+        f'</lastBuildDate>\n'
+    )
 
     # Add items for each article
     for article in articles:

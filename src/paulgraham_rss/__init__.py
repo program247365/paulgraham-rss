@@ -1,7 +1,9 @@
-import requests
-from bs4 import BeautifulSoup
 import re
 from datetime import datetime
+
+import requests
+from bs4 import BeautifulSoup
+
 
 def create_rss_feed():
     # Fetch the articles page
@@ -16,7 +18,8 @@ def create_rss_feed():
     # Filter for actual article links and extract info
     for link in links:
         href = link.get('href')
-        if href and href.endswith('.html') and href != 'index.html' and not href.startswith('http'):
+        if (href and href.endswith('.html') and
+            href != 'index.html' and not href.startswith('http')):
             title = link.text.strip()
             if title:  # Only include links with text
                 article_url = f"https://paulgraham.com/{href}"
@@ -51,15 +54,14 @@ def get_article_date(url):
             if match:
                 date_str = match.group(0)
                 try:
-                    # Convert to proper date format for RSS
-                    date_obj = datetime.strptime(date_str, "%B %Y")
-                    return date_obj.strftime("%a, %d %b %Y 12:00:00 +0000")
-                except:
+                    date = datetime.strptime(date_str, "%Y-%m-%d")
+                    return date.strftime("%a, %d %b %Y 12:00:00 +0000")
+                except (ValueError, TypeError):
                     pass
 
         # Return current date if no date found
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
-    except:
+    except Exception:
         # Return current date if any error occurs
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
 
@@ -71,7 +73,10 @@ def generate_rss_xml(articles):
     rss += '  <title>Paul Graham Essays</title>\n'
     rss += '  <link>https://paulgraham.com/articles.html</link>\n'
     rss += '  <description>Essays by Paul Graham</description>\n'
-    rss += f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</lastBuildDate>\n'
+    rss += (
+        f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}'
+        '</lastBuildDate>\n'
+    )
 
     # Add items for each article
     for article in articles:

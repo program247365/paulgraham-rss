@@ -31,3 +31,6 @@ ci-commit:
 	git add rss.xml
 	git commit -m "Update RSS feed."
 	git push
+
+code-format:
+	ruff check --fix .
