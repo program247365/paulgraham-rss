@@ -46,11 +46,13 @@ def create_rss_feed():
             title = link.text.strip()
             if title:  # Only include links with text
                 article_url = f"https://paulgraham.com/{href}"
+                if article_url == "https://paulgraham.com/rss.html":
+                    continue
                 articles.append({
                     'title': title,
                     'url': article_url,
-                    # Try to extract date from the article page
-                    'date': get_article_date(article_url)
+                    # Set fixed date for progbot.html, otherwise fetch from page
+                    'date': 'Wed, 01 Jan 1997 12:00:00 +0000' if article_url.endswith('progbot.html') else get_article_date(article_url)
                 })
 
     # Generate RSS feed
@@ -99,20 +101,32 @@ def get_article_date(url):
         soup = BeautifulSoup(response.text, 'html.parser')
         text = soup.get_text()
 
-        # Look for date patterns like "March 2025" or "January 2022"
+        # Look for date patterns like "March 2025", "January 2022" or just "1997"
         months = ["January", "February", "March", "April", "May", "June",
                  "July", "August", "September", "October", "November", "December"]
+        
+        # First try to find month + year pattern
         for month in months:
             pattern = f"{month} \\d{{4}}"
             match = re.search(pattern, text)
             if match:
                 date_str = match.group(0)
                 try:
-                    # Convert to proper date format for RSS
-                    date_obj = datetime.strptime(date_str, "%B %Y")
-                    return date_obj.strftime("%a, %d %b %Y 12:00:00 +0000")
-                except Exception:
-                    pass
+                    date = datetime.strptime(date_str, "%B %Y")
+                    return date.strftime("%a, %d %b %Y 12:00:00 +0000")
+                except (ValueError, TypeError):
+                    continue
+        
+        # If no month+year found, look for just a year
+        year_pattern = r'\b\d{4}\b'
+        year_match = re.search(year_pattern, text)
+        if year_match:
+            year = year_match.group(0)
+            try:
+                date = datetime.strptime(f"January {year}", "%B %Y")
+                return date.strftime("%a, %d %b %Y 12:00:00 +0000")
+            except (ValueError, TypeError):
+                pass
 
         # Return current date if no date found
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
@@ -121,13 +135,6 @@ def get_article_date(url):
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
 
 def generate_rss_xml(articles):
-    # Sort articles by pubdate descending (latest first)
-    sorted_articles = sorted(
-        articles,
-        key=lambda x: datetime.strptime(x["date"], "%a, %d %b %Y %H:%M:%S +0000"),
-        reverse=True
-    )
-
     # Create RSS header
     rss = '<?xml version="1.0" encoding="UTF-8" ?>\n'
     rss += '<rss version="2.0">\n'
@@ -136,28 +143,12 @@ def generate_rss_xml(articles):
     rss += '  <link>https://paulgraham.com/articles.html</link>\n'
     rss += '  <description>Essays by Paul Graham</description>\n'
     rss += (
-        f'  <lastBuildDate>'
-        f'{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}'
-        f'</lastBuildDate>\n'
+        f'  <lastBuildDate>{datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}'
+        '</lastBuildDate>\n'
     )
 
     # Add items for each article
-
-    # Remove duplicates by URL while preserving order
-    seen_urls = set()
-    unique_articles = []
-    for article in sorted_articles:
-        if article["url"] not in seen_urls:
-            seen_urls.add(article["url"])
-            unique_articles.append(article)
-
-    for article in unique_articles:
-        if article["url"] == "https://paulgraham.com/rss.html":
-            logging.info(f"Skipping RSS feed URL: {article['url']}")
-            logging.info("The whole reason we're here is to generate the RSS feed")
-            logging.info("So we're just going to skip this one")
-            logging.info("Because the original RSS feed is non-HTTPS")
-            continue
+    for article in articles:
         rss += '  <item>\n'
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'
