@@ -4,7 +4,7 @@
   <title>Paul Graham Essays</title>
   <link>https://paulgraham.com/articles.html</link>
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Sun, 20 Apr 2025 02:33:29 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 20 Apr 2025 02:40:10 +0000</lastBuildDate>
   <item>
     <title>What Languages Fix</title>
     <link>https://paulgraham.com/fix.html</link>
@@ -25,13 +25,6 @@
     <guid>https://paulgraham.com/progbot.html</guid>
     <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
     <description><![CDATA[Programming Bottom-Up]]></description>
-  </item>
-  <item>
-    <title>RSS</title>
-    <link>https://paulgraham.com/rss.html</link>
-    <guid>https://paulgraham.com/rss.html</guid>
-    <pubDate>Sun, 20 Apr 2025 12:00:00 +0000</pubDate>
-    <description><![CDATA[RSS]]></description>
   </item>
   <item>
     <title>What to Do</title>
