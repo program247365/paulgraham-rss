@@ -121,6 +121,13 @@ def get_article_date(url):
         return datetime.now().strftime("%a, %d %b %Y 12:00:00 +0000")
 
 def generate_rss_xml(articles):
+    # Sort articles by pubdate descending (latest first)
+    sorted_articles = sorted(
+        articles,
+        key=lambda x: datetime.strptime(x["date"], "%a, %d %b %Y %H:%M:%S +0000"),
+        reverse=True
+    )
+
     # Create RSS header
     rss = '<?xml version="1.0" encoding="UTF-8" ?>\n'
     rss += '<rss version="2.0">\n'
@@ -135,7 +142,7 @@ def generate_rss_xml(articles):
     )
 
     # Add items for each article
-    for article in articles:
+    for article in sorted_articles:
         rss += '  <item>\n'
         rss += f'    <title>{article["title"]}</title>\n'
         rss += f'    <link>{article["url"]}</link>\n'
