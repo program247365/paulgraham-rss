@@ -1,4 +1,16 @@
-.PHONY: ci-setup ci-install ci-run ci-commit
+.PHONY: help ci-setup ci-install ci-run ci-commit
+
+# Default target
+.DEFAULT_GOAL := help
+
+# Help task
+help:
+	@echo "Available targets:"
+	@echo "  help       - Show this help message"
+	@echo "  ci-setup   - Install uv and create virtual environment"
+	@echo "  ci-install - Install package in development mode"
+	@echo "  ci-run     - Run the main Python script"
+	@echo "  ci-commit  - Commit and push changes to git"
 
 # CI-specific tasks
 ci-setup:
