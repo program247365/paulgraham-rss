@@ -5,7 +5,7 @@
   <link>https://paulgraham.com/articles.html</link>
   <atom:link href="https://program247365.github.io/paulgraham-rss/rss.xml" rel="self" type="application/rss+xml" />
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Sat, 24 May 2025 01:37:29 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 25 May 2025 01:37:34 +0000</lastBuildDate>
   <item>
     <title>How to Do Great Work</title>
     <link>https://paulgraham.com/greatwork.html</link>
@@ -26,6 +26,13 @@
     <guid>https://paulgraham.com/selfindulgence.html</guid>
     <pubDate>Thu, 01 Jul 2010 12:00:00 +0000</pubDate>
     <description><![CDATA[How to Lose Time and Money]]></description>
+  </item>
+  <item>
+    <title>Good Writing</title>
+    <link>https://paulgraham.com/goodwriting.html</link>
+    <guid>https://paulgraham.com/goodwriting.html</guid>
+    <pubDate>Thu, 01 May 2025 12:00:00 +0000</pubDate>
+    <description><![CDATA[Good Writing]]></description>
   </item>
   <item>
     <title>What to Do</title>
