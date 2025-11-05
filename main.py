@@ -160,6 +160,20 @@ def generate_rss_xml(articles):
             seen_urls.add(article["url"])
             unique_articles.append(article)
 
+    # Sort articles by date (newest first)
+    # Parse the RFC 2822 date format and sort in descending order
+    from email.utils import parsedate_to_datetime
+    unique_articles.sort(
+        key=lambda x: parsedate_to_datetime(
+            "Sat, 16 Mar 2002 12:00:00 +0000"
+            if x["url"] == "https://paulgraham.com/noop.html"
+            else "Sat, 16 Mar 2002 12:00:00 +0000"
+            if x["url"] == "https://paulgraham.com/fix.html"
+            else x["date"]
+        ),
+        reverse=True
+    )
+
     # Add items for each unique article
     for article in unique_articles:
         rss += '  <item>\n'
