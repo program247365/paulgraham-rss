@@ -5,7 +5,7 @@
   <link>https://paulgraham.com/articles.html</link>
   <atom:link href="https://program247365.github.io/paulgraham-rss/rss.xml" rel="self" type="application/rss+xml" />
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Thu, 06 Nov 2025 01:38:19 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 07 Nov 2025 01:37:34 +0000</lastBuildDate>
   <item>
     <title>The Shape of the Essay Field</title>
     <link>https://paulgraham.com/field.html</link>
@@ -285,6 +285,13 @@
     <guid>https://paulgraham.com/cred.html</guid>
     <pubDate>Wed, 01 Apr 2020 12:00:00 +0000</pubDate>
     <description><![CDATA[Coronavirus and Credibility]]></description>
+  </item>
+  <item>
+    <title>How to Write Usefully</title>
+    <link>https://paulgraham.com/useful.html</link>
+    <guid>https://paulgraham.com/useful.html</guid>
+    <pubDate>Sat, 01 Feb 2020 12:00:00 +0000</pubDate>
+    <description><![CDATA[How to Write Usefully]]></description>
   </item>
   <item>
     <title>Being a Noob</title>
@@ -1594,13 +1601,6 @@
     <guid>https://paulgraham.com/hiring.html</guid>
     <pubDate>Tue, 01 Feb 1994 12:00:00 +0000</pubDate>
     <description><![CDATA[Hiring is Obsolete]]></description>
-  </item>
-  <item>
-    <title>How to Write Usefully</title>
-    <link>https://paulgraham.com/useful.html</link>
-    <guid>https://paulgraham.com/useful.html</guid>
-    <pubDate>Thu, 01 Jan 1970 12:00:00 +0000</pubDate>
-    <description><![CDATA[How to Write Usefully]]></description>
   </item>
 </channel>
 </rss>
