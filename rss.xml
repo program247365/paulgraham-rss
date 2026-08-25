@@ -5,7 +5,14 @@
   <link>https://paulgraham.com/articles.html</link>
   <atom:link href="https://program247365.github.io/paulgraham-rss/rss.xml" rel="self" type="application/rss+xml" />
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Mon, 24 Aug 2026 02:26:19 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 25 Aug 2026 02:21:03 +0000</lastBuildDate>
+  <item>
+    <title>How Universities Should Prepare Founders</title>
+    <link>https://paulgraham.com/prepare.html</link>
+    <guid>https://paulgraham.com/prepare.html</guid>
+    <pubDate>Sat, 01 Aug 2026 12:00:00 +0000</pubDate>
+    <description><![CDATA[How Universities Should Prepare Founders]]></description>
+  </item>
   <item>
     <title>How to Earn a Billion Dollars</title>
     <link>https://paulgraham.com/earn.html</link>
