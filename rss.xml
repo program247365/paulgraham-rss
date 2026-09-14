@@ -5,7 +5,14 @@
   <link>https://paulgraham.com/articles.html</link>
   <atom:link href="https://program247365.github.io/paulgraham-rss/rss.xml" rel="self" type="application/rss+xml" />
   <description>Essays by Paul Graham</description>
-  <lastBuildDate>Sun, 13 Sep 2026 05:57:39 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 14 Sep 2026 06:04:15 +0000</lastBuildDate>
+  <item>
+    <title>Making Startups Powerful</title>
+    <link>https://paulgraham.com/powerful.html</link>
+    <guid>https://paulgraham.com/powerful.html</guid>
+    <pubDate>Tue, 01 Sep 2026 12:00:00 +0000</pubDate>
+    <description><![CDATA[Making Startups Powerful]]></description>
+  </item>
   <item>
     <title>How Universities Should Prepare Founders</title>
     <link>https://paulgraham.com/prepare.html</link>
